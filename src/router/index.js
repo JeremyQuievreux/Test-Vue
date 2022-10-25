@@ -1,0 +1,34 @@
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import HomeView from '../views/HomeView.vue'
+import ApiView from '../views/ApiView.vue'
+import TodoView from '../views/TodoView.vue'
+
+Vue.use(VueRouter)
+
+const routes = [
+  {
+    path: '/',
+    name: 'home',
+    component: HomeView
+  },
+  {
+    path: '/api',
+    name: 'api',
+    component: ApiView
+  },
+  {
+    path: '/todo',
+    name: 'todo',
+    component: TodoView
+  },
+  
+]
+
+const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes
+})
+
+export default router
