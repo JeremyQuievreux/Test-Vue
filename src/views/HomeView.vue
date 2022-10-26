@@ -40,6 +40,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    @import '../style/colors.scss';
   .home{
     display: flex;
     flex-direction: column;
@@ -50,7 +51,7 @@ export default {
     }
     .home-card{
       width: 50%;
-      border: 3px solid #41B883;
+      border: 3px solid $primary;
       border-radius: 5px;
       margin: 10px;
       padding: 10px;

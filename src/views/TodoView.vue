@@ -51,6 +51,7 @@ import TaskCard from "../components/TaskCard.vue"
 </script>
 
 <style lang="scss" scoped>
+    @import '../style/colors.scss';
     .todo-page-container{
         display: flex;
         flex-direction: column;
@@ -61,15 +62,15 @@ import TaskCard from "../components/TaskCard.vue"
         .add-btn{
             height: 40px;
             width: 200px;
-            background-color: #41B883;
+            background-color: $primary;
             border-radius: 5px;
-            border-color: #364A60;
+            border-color: $secondary;
             border-style: solid;
             font-size: 20px;
             margin: 20px;
             &:hover{
-                border-color: #41B883;
-                background-color: white;
+                border-color: $primary;
+                background-color: $white;
             }
         }
     }

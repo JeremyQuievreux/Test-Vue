@@ -37,32 +37,24 @@
 </script>
 
 <style lang="scss" scoped>
+        @import '../style/colors.scss';
+        @import '../style/mixin.scss';
     .modal-container{
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
+        @include pos-fixed-0-0-0-0;
         width: 100%;
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include d-flex-row-c-c;
         .modal-overlay{
             background-color: rgba(0, 0, 0, 0.500);
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
+            @include pos-fixed-0-0-0-0;
         }
         .modal-content{
             padding: 20px;
-            background-color: white;
+            background-color: $white;
             position: fixed;
             width: 50%;
             height: 50%;
-            border: 3px solid #41B883;
+            border: 3px solid $primary;
             border-radius: 5px;
             display: flex;
             flex-direction: column;
@@ -76,15 +68,15 @@
             .my-btn{
             height: 40px;
             width: 200px;
-            background-color: #41B883;
+            background-color: $primary;
             border-radius: 5px;
-            border-color: #364A60;
+            border-color: $secondary;
             border-style: solid;
             font-size: 20px;
             margin: 20px;
             &:hover{
-                border-color: #41B883;
-                background-color: white;
+                border-color: $primary;
+                background-color: $white;
             }
         }
         }

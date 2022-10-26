@@ -58,6 +58,8 @@
 </script>
 
 <style lang="scss" scoped>
+    @import '../style/colors.scss';
+    @import '../style/mixin.scss';
     .api-main-container{
         display: flex;
         flex-direction: column;
@@ -71,27 +73,26 @@
             width: 100%;
             height: 100%;
             justify-content: space-around;
-            align-items: center;
+            align-items: start;
+            margin-top: 50px;
             .layout-card{
-                border: 2px solid #41B883;
+                border: 2px solid $primary;
                 border-radius: 5px;
                 height: 600px;
                 width: 30%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include d-flex-row-c-c;
                 margin-bottom: 20px;
             }
             form{
                 width: 50%;
                 height: 200px;
-                border: 3px solid #41B883;
+                border: 3px solid $primary;
                 border-radius: 5px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
-                background-color: white;
+                background-color: $white;
                 label {
                     font-size: 20px;
                 }
@@ -106,15 +107,15 @@
                     justify-content: space-between;
                     width: 75%;
                     button {
-                        background-color: #41B883;
+                        background-color: $primary;
                         width: 40%;
                         height: 40px;
                         border-radius: 5px;
                         border-style: initial;
                         font-size: 20px;
                         &:hover{
-                            background-color: white;
-                            border: 2px solid #41B883;
+                            background-color: $white;
+                            border: 2px solid $primary;
                         }
                     }
                 }

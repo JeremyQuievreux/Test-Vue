@@ -15,18 +15,9 @@
         data() {
             return {
                 navItems : [
-                    {
-                        name : "Home",
-                        url : "/"
-                    },
-                    {
-                        name : "API",
-                        url : "/api"
-                    },
-                    {
-                        name : "ToDo-List",
-                        url : "/todo"
-                    }
+                    {name : "Home", url : "/"},
+                    {name : "API", url : "/api"},
+                    {name : "Todo-List", url : "/todo"},
                 ]
             };
         },
@@ -35,14 +26,16 @@
 </script>
 
 <style lang="scss">
+    @import '../style/colors.scss';
+
     .topBar{
         height: 80px;
-        background-color: black;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        background-color: $black;
         padding: 0 10px;
-        border-bottom: 10px solid #364A60;
+        border-bottom: 10px solid $secondary;
         img{
             height: 50px;
         }
@@ -55,14 +48,14 @@
                 text-decoration: none;
                 font-size: 25px;
                 font-weight: bold;
-                color: #41B883;
+                color: $primary;
                 line-height: 3;
                 &:hover{
-                    color: white;
+                    color: $white;
                 }
             }
             .router-link-active{
-                border-bottom: 3px solid white;
+                border-bottom: 3px solid $white;
             }
         }
     }

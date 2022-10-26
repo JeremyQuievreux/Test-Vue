@@ -13,27 +13,28 @@
 </script>
 
 <style lang="scss" scoped>
+    @import '../style/colors.scss';
+    @import "../style/mixin.scss";
+
     .task-card{
         width: 75%;
         height: 80px;
-        border: 3px solid #41B883;
+        border: 3px solid $primary;
         border-radius: 5px;
         position: relative;
         margin: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include d-flex-row-c-c;
         .close-btn{
             width: 40px;
             height: 40px;
             border-radius: 5px;
-            background-color: #41B883;
-            border: 2px solid #41B883;
+            background-color: $primary;
+            border: 2px solid $primary;
             position: absolute;
             top: 20px;
             right: 10px;
             &:hover{
-                background-color: white;
+                background-color: $white;
             }
         }
     }

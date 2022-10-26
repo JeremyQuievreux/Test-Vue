@@ -35,25 +35,28 @@
 </script>
 
 <style lang="scss">
+    @import '../style/colors.scss';
+    @import '../style/mixin.scss';
+
     .card-container{
-        border: 2px solid black;
-        border-radius: 5px;
         width: 300px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         margin: 20px;
+        border: 2px solid $black;
+        border-radius: 5px;
         .card-header{
             height: 40px;
-            border: 2px solid black;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 10px;
+            border: 2px solid $black;
         }
         .card-body{
             height: 300px;
-            border: 2px solid black;
+            border: 2px solid $black;
             img{
                 width: 100%;
                 height: 100%;
@@ -61,33 +64,27 @@
         }
         .card-footer{
             height: 40px;
-            border: 2px solid black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            border: 2px solid $black;
+            @include d-flex-row-c-c;
             padding: 0 10px;
             .type-chips{
                 margin: 20px;
                 width: 30%;
                 height: 30px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include d-flex-row-c-c;
                 border-radius: 22px;
-                border: 2px solid black;
+                border: 2px solid $black;
             }
         }
         .card-stats-block{
             display: flex;
             flex-wrap: wrap;
-            border: 2px solid black;
+            border: 2px solid $black;
             border-radius: 0 0 3px 3px;
             p{
                 width: 50%;
                 height: 40px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include d-flex-row-c-c;
             }
         }
     }

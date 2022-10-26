@@ -1,0 +1,13 @@
+@mixin d-flex-row-c-c{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin pos-fixed-0-0-0-0{
+    position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+}
